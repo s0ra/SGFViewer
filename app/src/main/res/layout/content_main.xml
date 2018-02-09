@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sky.opengles.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <RelativeLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.sky.opengles.SquareLayout
+            android:id="@+id/goban"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goban"
+            android:thumb="@drawable/thumb"
+            android:max="10"
+            android:minHeight="50dp"
+            />
+
+        <TextView
+            android:text="Show comments here"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_below="@id/seekBar"
+            />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
